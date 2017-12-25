@@ -7,28 +7,31 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title>Umbrella?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-   <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500" rel="stylesheet" />
+
+   <link href="css/fonts/stylesheet.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
+   <link href="css/rain.css" rel="stylesheet" />
+
+   <script src="js/jquery.min.js"></script>
+   <script defer src="js/fontawesome.min.js"></script>
+   <script defer src="js/fa-regular.min.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/rain.js"></script>
 </head>
 
 <body>
-   <!-- <div id="nudge">Welcome! Let us know your location and we will tell you whether you need to get your umbrella or not.</div> -->
-   <!-- <div id="lat">lat</div>
-   <div id="lon">lon</div> -->
 
-	<div id="ahora" class="momento">
-      <div class="out clear-night">
-         <div class="in">
-            <h1 id="temp"></h1>
-            <p><span id="location"></span></p>
-         </div>
+   <div class="out">
+      <div class="in">
+         <h1><i class="big-icon far fa-circle-notch fa-spin"></i></h1>
+         <div class="suggestion"></div>
       </div>
    </div>
 
-	<footer><p><input type="button" id="locate" value="Update location" /></p></footer>
+   <div class="drops front-row"></div>
+   <div class="drops back-row"></div>
 
-	<script src="js/jquery-3.2.1.min.js"></script>
-   <script src="js/script.js"></script>
+	<footer><i class="far fa-location-arrow"></i> <span id="location"></span> <input type="button" class="locate" id="locate" value="Update location" /></footer>
+
 </body>
 </html>

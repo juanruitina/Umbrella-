@@ -1,12 +1,14 @@
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
-html,body,.momento {
+html,body {
 	width: 100%;
 	height: 100%;
+	line-height: normal;
 }
 body {
 	font-family:Raleway,sans-serif;
+	overflow:hidden;
 }
 a{text-decoration:inherit;color:inherit}
 .out {
@@ -19,12 +21,15 @@ a{text-decoration:inherit;color:inherit}
 	position: relative;
 	display: table-cell;
 	vertical-align: middle;
-	padding: 0 6%;
+	padding: 0 10%;
 }
 h1 {
 	font-size:5em;
 	font-weight: 100;
 	margin: 24px 0;
+}
+strong {
+	font-weight: bold;
 }
 .clear.day {
 	background: linear-gradient(10deg, rgba(34,106,183,1) 1%,rgba(153,185,239,1) 66%,rgba(255,249,178,1) 100%);
@@ -34,8 +39,12 @@ h1 {
 	background: linear-gradient(10deg, rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%);
 	color:white;
 }
-.rain {
+.rain.day {
 	background: linear-gradient(15deg, rgba(74,108,145,1) 7%,rgba(109,109,109,1) 99%);
+	color:white;
+}
+.rain.night {
+	background: linear-gradient(15deg, rgb(2, 44, 88) 7%,rgba(0,0,0,1) 99%);
 	color:white;
 }
 .snow {
@@ -65,33 +74,36 @@ h1 {
 }
 footer {
 	position:fixed;
-	bottom:24px;
+	bottom:1em;
 	width:100%;
 	text-align:center;
+	font-size:.8em;
+	padding:8px;
+	font-weight: 500;
 }
-footer p{
-    /*opacity: 0.2;*/
-    background:rgba(255,255,255,0.5);
-    border-radius:4px;
-    font-size:.8em;
-    padding:8px;
-    display: inline;
-    font-weight: 500;
-    /*transition: all 0.3s ease;*/
-}
-/*footer p:hover {
-    opacity: 1;
-}*/
 footer a {color:inherit;text-decoration:none;}
 
 .nudge {
 	position: fixed;
-   bottom: 0;
-   background: white;
-   width: 100%;
-   padding: 12px;
+	bottom: 0;
+	background: white;
+	width: 100%;
+	padding: 12px;
 }
 
-#temp {
-	 margin-right: -20px;
+.locate {
+	font-family: inherit;
+	background: white;
+	border: 0;
+	border-radius: 4px;
+	padding: 4px 6px;
+	margin: 4px;
+	font-size: inherit;
+}
+.suggestion p:first-of-type {
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+.out, footer {
+	z-index: 4;
 }
