@@ -7,6 +7,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title>Umbrella?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="manifest" href="manifest.json">
 
    <link href="css/fonts/stylesheet.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
@@ -23,7 +24,7 @@
 
    <div class="out">
       <div class="in">
-         <h1><i class="big-icon far fa-circle-notch fa-spin"></i></h1>
+         <h1 class="big-icon"></h1>
          <div class="suggestion"></div>
       </div>
    </div>
@@ -31,7 +32,7 @@
    <div class="drops front-row"></div>
    <div class="drops back-row"></div>
 
-	<footer><i class="far fa-location-arrow"></i> <span id="location"></span> <input type="button" class="locate" id="locate" value="Update location" /></footer>
+	<footer><i class="far fa-location-arrow"></i> <span class="location" id="location"></span> <input type="button" class="locate" id="locate" value="Update location" /></footer>
 
 </body>
 </html>

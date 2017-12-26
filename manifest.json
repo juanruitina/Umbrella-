@@ -1,0 +1,21 @@
+{
+   "short_name": "Umbrella?",
+   "name": "Umbrella?",
+   "icons": [{
+      "src": "img/icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+   },
+   {
+      "src": "img/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+   },
+   {
+      "src": "img/icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256"
+   }
+],
+"start_url": "index.php?launcher=true",
+"display": "standalone"
+}

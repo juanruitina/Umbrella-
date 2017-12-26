@@ -2,15 +2,24 @@ var coordinates;
 var location;
 var suggestion;
 
+function icon(classes) {
+   return '<i class="far ' + classes + '"></i>';
+}
+
+function bigIcon(classes) {
+   $('.big-icon').empty().html( icon(classes) );
+}
+
 function umbrella(lat, lon) {
+
+   $('body').removeClass();
+   $('.location, .suggestion').empty();
+   bigIcon('fa-circle-notch fa-spin');
+   killTheRain();
+
    $.getJSON("umbrella.php?lat=" + lat + "&lon=" + lon, function(data){
-      // console.log('data: ', data);
       document.getElementById('location').innerHTML = data.name;
       localStorage.setItem('location', data.name);
-
-      $('body').removeClass();
-      $('.big-icon').removeClass('fa-circle-notch fa-spin');
-      killTheRain();
 
       if ( data.day != 1 ) {
          $('body').addClass('night')
@@ -32,14 +41,14 @@ function umbrella(lat, lon) {
       }
 
       if ( data.rain == 1 ) {
-         $('.big-icon').addClass('fa-umbrella')
+         bigIcon('fa-umbrella');
       } else {
          if ( data.clouds >= 0.5 ) {
-            $('.big-icon').addClass('fa-cloud')
+            bigIcon('fa-cloud')
          } else if ( data.day != 1 ) {
-            $('.big-icon').addClass('fa-moon')
+            bigIcon('fa-moon')
          } else {
-            $('.big-icon').addClass('fa-sun')
+            bigIcon('fa-sun')
          }
       }
       if ( data.rain == 1 ) {
