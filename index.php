@@ -32,7 +32,17 @@
    <div class="drops front-row"></div>
    <div class="drops back-row"></div>
 
-	<footer><i class="far fa-location-arrow"></i> <span class="location" id="location"></span> <input type="button" class="locate" id="locate" value="Update location" /></footer>
+	<footer><i class="far fa-location-arrow"></i> <span class="location"></span> <input type="button" class="btn locate" value="Update" /></footer>
+
+   <!-- <div class="modal-background"></div> -->
+
+   <div class="modal">
+      <div class="modal-container">
+         <div class="modal-text"><p><strong>Hi! Want to know if you'll need an umbrella?</strong></p><p>Please, allow the app to access your location. We won't store any information.</p></div>
+         <input type="button" class="btn locate modal-button" value="Check location" />
+      </div>
+   </div>
+
 
 </body>
 </html>
